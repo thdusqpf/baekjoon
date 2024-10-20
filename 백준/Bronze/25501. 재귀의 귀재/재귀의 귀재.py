@@ -1,3 +1,4 @@
+import sys
 cnt = 0
 def is_palindrome(word):
     global cnt
@@ -8,9 +9,9 @@ def is_palindrome(word):
         return 0
     return is_palindrome(word[1:-1])
 
-
-n = int(input())
-words = [input() for _ in range(n)]
+my_input = sys.stdin.readline
+n = int(my_input())
+words = [my_input().strip() for _ in range(n)]
 
 for word in words:
     cnt = 0
